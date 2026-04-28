@@ -66,7 +66,7 @@ const About = () => {
       <h1 style={{color: '#ef5350'}}>About This Pokédex</h1>
       <p>
         This pokedex was built  using <strong>React</strong>, 
-        <strong> Vite</strong>, and the <strong>PokéAPI</strong> as my 2nd Web Development Assignment.
+        <strong> Vite</strong>, and the <strong>PokéAPI</strong> as our 2nd Web Development Assignment.
       </p>
 
       <div style={sectionStyle}>
