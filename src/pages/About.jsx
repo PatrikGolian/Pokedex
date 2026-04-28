@@ -106,7 +106,7 @@ const About = () => {
 
       <div style={{textAlign: 'center', marginTop: '40px', fontSize: '0.9rem', opacity: 0.7}}>
         <p>Created as a Web Development Assignment</p>
-        <p>© Patrik Golian 2026</p>
+        <p>© Patrik Golian and Richard Vegh 2026</p>
       </div>
     </div>
   );
