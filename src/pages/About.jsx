@@ -6,7 +6,6 @@ const About = () => {
   const [topWeight, setTopWeight] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Hardcoded random facts to make the page interesting
   const randomFacts = [
     "Pikachu's name is a combination of the Japanese onomatopoeia for spark (pika) and the sound a mouse makes (chu).",
     "Snorlax was inspired by a real-life Game Freak staff member, Koji Nishino.",
@@ -18,11 +17,9 @@ const About = () => {
     const fetchPokemons = async () => {
       try {
         setLoading(true);
-        // Fetching the first 151 (Kanto) to keep the data consistent
         const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
         const all = res.data.results;
 
-        // Fetch details for all 151 to calculate rankings
         const detailed = await Promise.all(all.map(pokemon => axios.get(pokemon.url)));
         const data = detailed.map(d => d.data);
 
@@ -38,7 +35,6 @@ const About = () => {
     fetchPokemons();
   }, []);
 
-  // Styles (Keeping it consistent with your Pokedex look)
   const containerStyle = {
     maxWidth: '800px',
     margin: '0 auto',
